@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #4d4a69,
+    #3d395d,
+    #2d2a51,
+    #1c1a45,
+    #0a0a39
+  );
+  color: white;
+  font-family: "Zen Dots", cursive;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 7rem;
+  color: #ecec9a;
+  animation: pop-in 2.9s ease-in-out forwards alternate-reverse infinite;
+}
+.games {
+  margin-top: 3rem;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.game {
+  height: 15rem;
+  width: 20rem;
+  border: #ecec9a solid;
+  margin: 3rem;
+  border-radius: 12%;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.piano {
+  background-image: url("/img/piano.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.beat-maker {
+  background-image: url("/img/beat.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.simon {
+  background-image: url("/img/simon.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.drums {
+  background-image: url("/img/drumkit.png");
+  background-position: center;
+  background-size: cover;
+}
+.colors {
+  background-image: url("/img/colors.png");
+  background-position: center;
+  background-size: cover;
+}
+.active {
+  transform: rotate(10deg) scale(1.1);
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-2rem) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
